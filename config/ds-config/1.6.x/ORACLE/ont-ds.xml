@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<datasources>
+
+    <!-- OntologyBootStrapDS   -->
+    <local-tx-datasource>
+    <jndi-name>OntologyBootStrapDS</jndi-name>
+        <driver-class>oracle.jdbc.driver.OracleDriver</driver-class>      
+        <connection-url>jdbc:oracle:thin:@DBCONNECTION</connection-url>
+        <user-name>I2B2HIVESCHEMA</user-name>
+        <password>I2B2HIVEPASS</password>
+    </local-tx-datasource>
+    
+<!--WIZARDINSERT-->
+
+</datasources>

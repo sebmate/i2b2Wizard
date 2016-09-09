@@ -1,0 +1,19 @@
+i2b2 Wizard has received many contributions. Special thanks to:
+
+Igor Engel and Daniel Plog
+
+          ... for refactoring much of the source code for the modular version (2013-2014)
+
+Axel Newe ... for integrating the "Additional Features" function
+
+Sebastian Stäubert,
+Raphael Majeed,
+Christian Maier,
+Mike Mendis,
+Benjamin Baum and Christian Bauer 
+
+          ... for MANY bugfixes and hours of testing
+
+TMF e.V.  ... for funding this tool within the IDRT1 and IDRT2 projects
+
+And to everybody who is missing here.

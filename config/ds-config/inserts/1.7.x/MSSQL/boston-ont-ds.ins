@@ -1,0 +1,17 @@
+    <!--BOSTONSTART-->
+    
+    <!-- Ontology DS for Demo -->
+    <local-tx-datasource>
+        <jndi-name>OntologyDemoDS</jndi-name>
+		<connection-url>jdbc:sqlserver://DBCONNECTION;DatabaseName=I2B2METADATA</connection-url>
+		<driver-class>com.microsoft.sqlserver.jdbc.SQLServerDriver</driver-class>
+		<user-name>I2B2METADATA</user-name>
+		<password>i2b2metadata</password>
+		<idle-timeout-minutes>1</idle-timeout-minutes>
+		<set-tx-query-timeout>true</set-tx-query-timeout>
+		<metadata>
+			<type-mapping>MS SQLSERVER2000</type-mapping>
+		</metadata>
+	</local-tx-datasource>
+	
+    <!--BOSTONEND-->

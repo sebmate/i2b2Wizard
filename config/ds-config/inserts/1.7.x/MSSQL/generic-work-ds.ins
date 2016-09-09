@@ -1,0 +1,18 @@
+    <!--PROJECTNAMESTART-->
+   
+    <!-- Workplace DS for PROJECTNAME -->
+	<local-tx-datasource>
+		<jndi-name>WorkplaceNOSPACESDS</jndi-name>
+		<connection-url>jdbc:sqlserver://DBCONNECTION;DatabaseName=DBUSER</connection-url>
+		<driver-class>com.microsoft.sqlserver.jdbc.SQLServerDriver</driver-class>
+		<user-name>DBUSER</user-name>
+		<password>DBPASS</password>
+		<idle-timeout-minutes>1</idle-timeout-minutes>
+		<set-tx-query-timeout>true</set-tx-query-timeout>
+		<metadata>
+			<type-mapping>MS SQLSERVER2000</type-mapping>
+		</metadata>
+	</local-tx-datasource>
+	
+    <!--PROJECTNAMEEND-->
+    

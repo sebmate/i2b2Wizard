@@ -1,0 +1,20 @@
+    <!--BOSTONSTART-->
+    <!-- Workplace DS for Demo -->
+    <datasource jta="false" jndi-name="java:/WorkplaceDemoDS"
+		pool-name="WorkplaceDemoDS" enabled="true" use-ccm="false">
+		<connection-url>jdbc:oracle:thin:@DBCONNECTION</connection-url>
+		<driver-class>oracle.jdbc.OracleDriver</driver-class>
+		<driver>ojdbc6.jar</driver>
+		<security>
+			<user-name>i2b2workdata</user-name>
+			<password>i2b2workdata</password>
+		</security>
+		<validation>
+			<validate-on-match>false</validate-on-match>
+			<background-validation>false</background-validation>
+		</validation>
+		<statement>
+			<share-prepared-statements>false</share-prepared-statements>
+		</statement>
+	</datasource>	
+    <!--BOSTONEND-->

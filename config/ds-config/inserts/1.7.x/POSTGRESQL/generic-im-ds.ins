@@ -1,0 +1,22 @@
+    <!--PROJECTNAMESTART-->
+
+    <!-- IM DS for PROJECTNAME -->
+
+	<datasource jta="false" jndi-name="java:/IMNOSPACESDS"
+		pool-name="IMNOSPACESDS" enabled="true" use-ccm="false">
+		<connection-url>jdbc:postgresql://DB_SERVER:DB_PORT/i2b2?searchpath=DBUSER</connection-url>
+		<driver-class>org.postgresql.Driver</driver-class>
+		<driver>postgresql-9.2-1002.jdbc4.jar</driver>
+		<security>
+			<user-name>DBUSER</user-name>
+			<password>DBPASS</password>
+		</security>
+		<validation>
+			<validate-on-match>false</validate-on-match>
+			<background-validation>false</background-validation>
+		</validation>
+		<statement>
+			<share-prepared-statements>false</share-prepared-statements>
+		</statement>
+	</datasource>
+    <!--PROJECTNAMEEND-->

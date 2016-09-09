@@ -1,0 +1,20 @@
+    <!--BOSTONSTART-->
+    <!-- Workplace DS for Demo -->
+    <datasource jta="false" jndi-name="java:/WorkplaceDemoDS"
+		pool-name="WorkplaceDemoDS" enabled="true" use-ccm="false">
+		<connection-url>jdbc:postgresql://DB_SERVER:DB_PORT/i2b2?searchpath=i2b2workdata</connection-url>
+		<driver-class>org.postgresql.Driver</driver-class>
+		<driver>postgresql-9.2-1002.jdbc4.jar</driver>
+		<security>
+			<user-name>i2b2workdata</user-name>
+			<password>i2b2workdata</password>
+		</security>
+		<validation>
+			<validate-on-match>false</validate-on-match>
+			<background-validation>false</background-validation>
+		</validation>
+		<statement>
+			<share-prepared-statements>false</share-prepared-statements>
+		</statement>
+	</datasource>	
+    <!--BOSTONEND-->

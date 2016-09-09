@@ -1,0 +1,12 @@
+# Scheme:
+# "{Unique Short Name}" "{Description}" {default on|off}
+# 
+# Examples:
+# "MyPlugin" "My first test plugin" on
+# "YourPlugIn" "Plugin found somewhere in the web" off
+#
+# The "Unique Short Name" must match the name of the zip file that is used for installing the feature!
+
+"ExportXLS" "Webclient Plugin for Excel/CSV Export v3.0" on
+"AdditionalData" "IDRT Additional Data v2 server plugin" on
+#"ExportCSV" "Old Webclient Plugin for CSV Export" off

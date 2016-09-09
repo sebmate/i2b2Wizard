@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<datasources>
+
+    <!-- JMS DS -->
+    <local-tx-datasource>
+    <jndi-name>DefaultDS</jndi-name>
+    <connection-url>jdbc:oracle:thin:@DBCONNECTION</connection-url>
+    <driver-class>oracle.jdbc.driver.OracleDriver</driver-class>
+    <user-name>I2B2HIVESCHEMA</user-name>
+    <password>I2B2HIVEPASS</password>
+    <idle-timeout-minutes>1</idle-timeout-minutes>
+    <exception-sorter-class-name>org.jboss.resource.adapter.jdbc.vendor.OracleExceptionSorter</exception-sorter-class-name>
+        <metadata>
+            <type-mapping>Oracle9i</type-mapping>
+        </metadata>
+    </local-tx-datasource>
+
+</datasources>

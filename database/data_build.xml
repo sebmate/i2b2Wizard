@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Various Database Jobs" basedir=".">
+
+	<property environment="env" />
+
+	<property file="./db.properties" />
+
+	<target name="init"  description="Prepare for build">
+		<path id="classpath">
+			<pathelement location="./ojdbc14.jar" />
+			<pathelement location="./sqljdbc.jar"/>
+			<pathelement location="./postgresql-9.2-1002.jdbc4.jar"/>
+		</path>
+	</target>
+
+	<!-- ================================================================================================= -->
+
+	<!-- Generic target, the SQL-file is created by Wizard and deleted afterwards: -->
+
+	<target name="database_job" depends="init">
+		<sql driver="${db.driver}" url="${db.url}" userid="${db.username}" password="${db.password}" classpathref="classpath" onerror="continue" print="true">
+			<transaction src="./scripts/database_job.sql" />
+		</sql>
+	</target>
+
+	<!-- Creates and loads sample staging tables: -->
+
+	<target name="insert_stg_examples" depends="init">
+		<sql driver="${db.driver}" url="${db.url}" userid="${db.username}" password="${db.password}" classpathref="classpath" onerror="continue" print="true">
+			<transaction src="./scripts/insert_stg_examples.sql" />
+		</sql>
+	</target>
+
+	<!-- Loads data required for the Boston Demodata into the I2B2HIVE-schema: -->
+
+	<target name="insert_boston_related_hive" depends="init">
+		<sql driver="${db.driver}" url="${db.url}" userid="${db.username}" password="${db.password}" classpathref="classpath" onerror="continue" print="true">
+			<transaction src="./scripts/insert_boston_related_hive.sql" />
+		</sql>
+	</target>
+
+	<!-- Loads data required for the Boston Demodata into the I2B2PM-schema: -->
+
+	<target name="insert_boston_related_pm" depends="init">
+		<sql driver="${db.driver}" url="${db.url}" userid="${db.username}" password="${db.password}" classpathref="classpath" onerror="continue" print="true">
+			<transaction src="./scripts/insert_boston_related_pm.sql" />
+		</sql>
+	</target>
+
+
+	<!-- This creates the database users I2B2PM and I2B2HIVE: -->
+
+	<target name="create_ORACLE_users_i2b2hive" depends="init">
+		<sql driver="${db.driver}" url="${db.url}" userid="${db.username}" password="${db.password}" classpathref="classpath" onerror="continue" print="true">
+			<transaction src="./scripts/create_ORACLE_users_i2b2hive.sql" />
+		</sql>
+	</target>
+
+	<target name="create_MSSQL_users_i2b2hive" depends="init">
+		<sql driver="${db.driver}" url="${db.url}" userid="${db.username}" password="${db.password}" classpathref="classpath" onerror="continue" print="true">
+			<transaction src="./scripts/create_MSSQL_users_i2b2hive.sql" />
+		</sql>
+	</target>
+
+
+	<!-- This creates a set of three database users for metadata, clinical data and workdata. Used for the Boston Demodata : -->
+
+	<target name="create_ORACLE_users" depends="init">
+		<sql driver="${db.driver}" url="${db.url}" userid="${db.username}" password="${db.password}" classpathref="classpath" onerror="continue" print="true">
+			<transaction src="./scripts/create_ORACLE_users.sql" />
+		</sql>
+	</target>
+
+	<target name="create_MSSQL_users" depends="init">
+		<sql driver="${db.driver}" url="${db.url}" userid="${db.username}" password="${db.password}" classpathref="classpath" onerror="continue" print="true">
+			<transaction src="./scripts/create_MSSQL_users.sql" />
+		</sql>
+	</target>
+	
+	
+	<!-- This creates a single database user for metadata, clinical data and workdata. Used for projects created by i2b2 Wizard: -->
+
+	<target name="create_ORACLE_users_single" depends="init">
+		<sql driver="${db.driver}" url="${db.url}" userid="${db.username}" password="${db.password}" classpathref="classpath" onerror="continue" print="true">
+			<transaction src="./scripts/create_ORACLE_users_single.sql" />
+		</sql>
+	</target>
+	
+	<target name="create_MSSQL_users_single" depends="init">
+		<sql driver="${db.driver}" url="${db.url}" userid="${db.username}" password="${db.password}" classpathref="classpath" onerror="continue" print="true">
+			<transaction src="./scripts/create_MSSQL_users_single.sql" />
+		</sql>
+	</target>
+	
+	<target name="MSSQL_enable_fulltext" depends="init">
+		<sql driver="${db.driver}" url="${db.url}" userid="${db.username}" password="${db.password}" classpathref="classpath" onerror="continue" print="true">
+			<transaction src="./scripts/MSSQL_enable_fulltext.sql" />
+		</sql>
+	</target>
+	
+	<target name="create_POSTGRESQL_users_single" depends="init">
+		<sql driver="${db.driver}" url="${db.url}" userid="${db.username}" password="${db.password}" classpathref="classpath" onerror="continue" print="true">
+			<transaction src="./scripts/create_POSTGRESQL_users_single.sql" />
+		</sql>
+	</target>
+
+</project>
+
+

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<datasources>
+  
+    <!-- PMBootStrapDS  -->
+    <local-tx-datasource>
+        <jndi-name>PMBootStrapDS</jndi-name>
+        <driver-class>oracle.jdbc.driver.OracleDriver</driver-class>      
+        <connection-url>jdbc:oracle:thin:@DBCONNECTION</connection-url>
+        <user-name>I2B2PMSCHEMA</user-name>
+        <password>I2B2PMPASS</password>
+    </local-tx-datasource>
+
+</datasources>

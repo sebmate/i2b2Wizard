@@ -1,0 +1,17 @@
+    <!--BOSTONSTART-->
+ 
+    <!-- CRC DS for Demo -->
+    <local-tx-datasource>
+        <jndi-name>QueryToolDemoDS</jndi-name>
+		<connection-url>jdbc:sqlserver://DBCONNECTION;DatabaseName=I2B2DEMODATA</connection-url>
+		<driver-class>com.microsoft.sqlserver.jdbc.SQLServerDriver</driver-class>
+		<user-name>I2B2DEMODATA</user-name>
+		<password>i2b2demodata</password>
+		<idle-timeout-minutes>1</idle-timeout-minutes>
+		<set-tx-query-timeout>true</set-tx-query-timeout>
+		<metadata>
+			<type-mapping>MS SQLSERVER2000</type-mapping>
+		</metadata>
+    </local-tx-datasource>
+	
+    <!--BOSTONEND-->

@@ -1,0 +1,166 @@
+i2b2 Wizard Changelog
+=====================
+
+Version 1.01, 03.05.2010
+------------------------
+
+Initial public release.
+
+
+Version 1.10, 08.05.2010
+------------------------
+
+- Changed the chronological order in autoinstallApps(): it verifies if 'unzip' is installed before it attempts to unzip the ZIP files. Required for Ubuntu 10.04 Server.
+- Added package 'bc' to install in AutoInstallApps().
+- The implementation to use passwords other than "i2b2pm" and "i2b2hive" for "I2B2PM" and "I2B2HIVE" was not finished. Fixed that and modified the *ds.xml-files in the config subdirectory.
+
+
+
+Version 1.11, 14.05.2010
+------------------------
+
+- Fixed config/wizard.sh: set SYSTEM_SANE=no for a new system.
+- Changed the chronological order in createProject(): autoinstallApps is called after the form has been filled out, not before.
+
+
+Version 1.12, 04.06.2010
+------------------------
+
+Withdrawn. 
+
+
+Version 1.13, 04.06.2010
+------------------------
+
+- Fixed Oracle configuration ...
+
+
+Version 1.14, 03.08.2010
+------------------------
+
+- Updated everything for i2b2 1.5.1 - i2b2 1.4 is no longer supported by the script!
+- Updated and fixed documentation PDF.
+
+Hint: the i2b2 webclient console can now be accessed with http://localhost/admin.
+
+Version 1.15, 12.10.2010
+------------------------
+
+- Small update with updated MD5s for i2b2 Workbench 1.5.2
+
+
+Version 1.23, 07.09.2011
+------------------------
+
+- Updated to i2b2 1.5.4
+- Several major bug fixes and improvements
+- Can now download the i2b2 Software packages automatically, if a proper server path is provided
+- Dramatically improved the error handler
+- Added a log viewer for JBoss
+- Added full integration of SHRINE 1.10 (re-implements the "quick_install" script from the SHRINE developers):
+	- Automatic download of software/files
+	- Configuration of certificate parameters (hospital name, etc.)
+	- Demo installation (with user "shrine" and password "demouser", used with i2b2 project "Demo")
+	- Start/Stop of Tomcat/SHRINE
+	- Added a log viewer for Tomcat
+	- Added the Tomcat/SHRINE status (running/stopped) to the upper left corner
+
+
+Version 1.24
+------------
+
+- Changed SVN path for SHRINE installation
+
+
+Version 1.3.1
+-------------
+
+- Major upgrade to support i2b2 1.6.01
+- Added auto-update function for i2b2 Wizard
+- Dramatically improved error handler, which operates much finer-grained now
+- Improved program structure to simplify the integration of future i2b2 versions
+- Changed/Improved Oracle XE installation
+- Added a 'repair my i2b2 installation' function
+- Added 'awareness' of project names 'Demo' and user names 'i2b2' and 'demo' (reserved by the Boston Demodata)
+- Improved/fixed progress-bars (thanks to Eric Zapletal)
+- Updated PDF documentation
+- SHRINE is not working in this version, however, installation procedure is still included
+- Changed version naming to Unix style (1.3.0 instead of 1.30)
+
+Version 1.3.2-1.3.5
+-------------------
+
+- Internal development versions for 3rd German i2b2 and IDRT Workshop hosted by TMF e.V.
+- Upgraded to i2b2 1.6.02
+- Switched from Oracle-Java to OpenJDK
+
+Version 1.3.6
+-------------
+
+- Various bugfixes
+
+Version 1.4.0
+-------------
+
+- New version including some new IDRT features
+- Restructured user and project menu
+- Colored JBoss/SHRINE status
+- Decoupled software installation though package manager from apt-get. Now also supports yum.
+- Partial support for CentOS 6.2 and 5.8 (dialog 1.1 needs manual install, Apache configuration is still messed up)
+- Integrated customization of schemas I2B2PM and I2B2HIVE
+- Integrated a function which monitors the JBoss log upon start-up for possible errors
+
+Version 1.4.2
+-------------
+
+- Updated to support i2b2 1.6.04
+- Various minor improvements
+
+Version 1.4.3
+-------------
+
+- New developers: Igor Engel and Daniel Plog :-)
+- Updated to support i2b2 1.6.06
+- Various minor improvements
+
+
+Version 1.9.1
+-------------
+
+- Igor Engel and Daniel Plog are on board. They have done most of the splitting (see below). Welcome!
+- Fist "Alpha" version (pre-2.0) with a modular script design to support multiplse i2b2 and OS versions as well as different database types.
+- Although already modular, it currently only supports the same environment as version 1.4.3.
+
+
+Version 1.9.6
+-------------
+
+New features by Axel Newe:
+- Added Menu for installing additional features (web client plugins etc...)
+- Added ExportXLS web client plugin v3.0
+
+Version 1.9.8
+-------------
+
+- Included support for i2b2 1.6.09
+- Fixed creation of start.sh and stop.sh (the Wizard did not validate/change JAVA_HOME)
+- Includes automatic fix for bug in admin/i2b2_config_data.js ("amdinOnly" instead of "adminOnly")
+- Fixed bug which causes double slashes in function "getWebserverDirectory()"
+- Fixed bad if-statement
+
+
+Version 1.9.9
+-------------
+- Set i2b2 1.6.09 as default.
+- Fixed the problem of a message that shows that Java is not yet installed (which is correct on a new
+  machine, but annoying). Made the checkJavaInstallation() function optionally "silent".
+
+
+Version 2015-07-2015
+--------------------
+- Final release as part of the IDRT2 project
+- Many changes - sorry, changelog was not maintained properly
+- Changed to new version numbering scheme recently. The version is now the date of the release
+- Fixed many issues as identified by the TMF e.V. as part of the IDRT2 project
+- Included the IDRT Additional Data plugin (by Göttingen), updated the plugin installer
+

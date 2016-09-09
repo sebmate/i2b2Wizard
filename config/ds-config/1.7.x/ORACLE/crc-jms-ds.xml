@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<datasources xmlns="http://www.jboss.org/ironjacamar/schema">
+
+    <!-- JMS DS -->
+
+	<datasource jta="false" jndi-name="java:/DefaultDS" 
+		pool-name="DefaultDS" enabled="true" use-ccm="false">
+		<connection-url>jdbc:oracle:thin:@DBCONNECTION</connection-url>
+		<driver-class>oracle.jdbc.driver.OracleDriver</driver-class>
+		<driver>ojdbc6.jar</driver>
+		<security>
+			<user-name>I2B2HIVESCHEMA</user-name>
+			<password>I2B2HIVEPASS</password>
+		</security>
+		<validation>
+			<validate-on-match>false</validate-on-match>
+			<background-validation>false</background-validation>
+		</validation>
+		<statement>
+			<share-prepared-statements>false</share-prepared-statements>
+		</statement>
+	</datasource>
+	
+</datasources>

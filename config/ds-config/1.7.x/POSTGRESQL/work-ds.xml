@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<datasources xmlns="http://www.jboss.org/ironjacamar/schema">
+    <!-- WorkplaceBootStrapDS  -->
+	<datasource jta="false" jndi-name="java:/WorkplaceBootStrapDS" 
+		pool-name="WorkplaceBootStrapDS" enabled="true" use-ccm="false">
+		<connection-url>jdbc:postgresql://DB_SERVER:DB_PORT/i2b2?searchpath=I2B2HIVESCHEMA</connection-url>
+		<driver-class>org.postgresql.Driver</driver-class>
+		<driver>postgresql-9.2-1002.jdbc4.jar</driver>
+		<security>
+			<user-name>I2B2HIVESCHEMA</user-name>
+			<password>I2B2HIVEPASS</password>
+		</security>
+		<validation>
+			<validate-on-match>false</validate-on-match>
+			<background-validation>false</background-validation>
+		</validation>
+		<statement>
+			<share-prepared-statements>false</share-prepared-statements>
+		</statement>
+	</datasource>
+<!--WIZARDINSERT-->               
+</datasources>

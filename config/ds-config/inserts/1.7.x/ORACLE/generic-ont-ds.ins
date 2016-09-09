@@ -1,0 +1,24 @@
+    <!--PROJECTNAMESTART-->
+
+    <!-- Ontology DS for PROJECTNAME -->
+
+	<datasource jta="false" jndi-name="java:/OntologyNOSPACESDS"
+		pool-name="OntologyNOSPACESDS" enabled="true" use-ccm="false">
+		<connection-url>jdbc:oracle:thin:@DBCONNECTION</connection-url>
+		<driver-class>oracle.jdbc.OracleDriver</driver-class>
+		<driver>ojdbc6.jar</driver>
+		<security>
+			<user-name>DBUSER</user-name>
+			<password>DBPASS</password>
+		</security>
+		<validation>
+			<validate-on-match>false</validate-on-match>
+			<background-validation>false</background-validation>
+		</validation>
+		<statement>
+			<share-prepared-statements>false</share-prepared-statements>
+		</statement>
+	</datasource>
+
+	
+    <!--PROJECTNAMEEND-->

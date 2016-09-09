@@ -1,0 +1,13 @@
+SHRINE installation
+===================
+
+SHRINE does not work in this version of i2b2 Wizard!
+
+
+If you want to install SHRINE with i2b2 Wizard, please install MySQL manually. This can be done by typing:
+
+	apt-get install mysql-server
+
+The installer asks you for a root password, use "shrine". If you use a different password, set it up in the SHRINE configuration menu in i2b2 Wizard before installing SHRINE.
+
+To access SHRINE after the installation, open http://localhost:6060/shrine-webclient
