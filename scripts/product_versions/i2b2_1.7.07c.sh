@@ -1319,7 +1319,7 @@ createProject() {
 			"Database Password:" 3 4 "mypassword" 3 33 25 0\
 			"Auto create DB User?" 5 4 "$DB_ALLOW" 5 33 4 0\
 			"Import Boston Demodata?" 6 4 "no" 6 33 4 0\
-            "Use CHAR semantics?" 7 4 "no" 7 33 4 0\
+            "Use CHAR semantics?" 7 4 "yes" 7 33 4 0\
 			2>$TEMPVAR
 			
 		if [ ${?} -ne 0 ]; then return; fi   
@@ -1328,7 +1328,7 @@ createProject() {
 		DB_PASS=`sed -n 2p $TEMPVAR`
 		DB_CREATE=`sed -n 3p $TEMPVAR`
 		IMPORT_BOSTON=`sed -n 4p $TEMPVAR`
-		CHAR_SEMANTICS=`sed -n 4p $TEMPVAR`
+		CHAR_SEMANTICS=`sed -n 5p $TEMPVAR`
 	fi
 
     TMP_ORA_STRING="$DB_SERVER:$DB_PORT:$ORA_SSID"
